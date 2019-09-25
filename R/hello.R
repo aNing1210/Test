@@ -55,7 +55,7 @@ hello <- function() {
 #' # because package authors may not want you to go into their backyards
 #' rmini:::add_one(c('a', 'b', 'c'))
 
-
+#'
 
 
 
