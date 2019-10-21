@@ -10,3 +10,6 @@ License: GPL-3
 LazyData: true
 Encoding: UTF-8
 RoxygenNote: 6.1.1
+Imports:MASS,reshape2
+Suggests: knitr, rmarkdown, foreach, doRNG, doParallel, Biobase,
+        SummarizedExperiment, testthat, methods
