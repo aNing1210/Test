@@ -29,9 +29,6 @@ BC=c(1.78e-02,1.05e-06,1.37e-05,7.18e-03,0.00e+00,0.00e+00,0.00e+00,4.48e-03,2.1
 pcor.test(y.data$hl,y.data$disp,y.data[,c("deg","BC")])
 
 }
-\references{
-\url{https://github.com/yihui/rmini}
-}
 \author{
 Who are you?
 }

@@ -1,4 +1,4 @@
-#' @title GENIE3
+#' @title GENIE3 GEne Network Inference with Ensemble of Trees
 #'
 #' @description \code{GENIE3} Infers a gene regulatory network (in the form of a weighted adjacency matrix) from expression data, using ensembles of regression trees.
 #'
@@ -19,6 +19,9 @@
 #' @return Weighted adjacency matrix of inferred network. Element w_ij (row i, column j) gives the importance of the link from regulatory gene i to target gene j.
 #' @useDynLib Test, .registration = TRUE
 #' @importFrom stats setNames
+#' @importFrom Biobase ExpressionSet
+#' @docType methods
+#' @rdname GENIE3-methods
 #' @examples
 #' ## Generate fake expression matrix
 #' exprMatrix <- matrix(sample(1:10, 100, replace=TRUE), nrow=20)
@@ -46,6 +49,8 @@ setGeneric("GENIE3", signature="exprMatrix",
            })
 
 #' @export
+#' @rdname GENIE3-methods
+#' @aliases GENIE3-methods matrix
 setMethod("GENIE3", "matrix",
           function(exprMatrix, regulators=NULL, targets=NULL, treeMethod="RF", K="sqrt", nTrees=1000, nCores=1, verbose=FALSE)
           {
@@ -53,6 +58,8 @@ setMethod("GENIE3", "matrix",
           })
 
 #' @export
+#' @rdname GENIE3-methods
+#' @aliases GENIE3-methods SummarizedExperiment
 setMethod("GENIE3", "SummarizedExperiment",
           function(exprMatrix, regulators=NULL, targets=NULL, treeMethod="RF", K="sqrt", nTrees=1000, nCores=1, verbose=FALSE)
           {
@@ -62,6 +69,8 @@ setMethod("GENIE3", "SummarizedExperiment",
           })
 
 #' @export
+#' @rdname GENIE3-methods
+#' @aliases GENIE3-methods ExpressionSet
 setMethod("GENIE3", "ExpressionSet",
           function(exprMatrix, regulators=NULL, targets=NULL, treeMethod="RF", K="sqrt", nTrees=1000, nCores=1, verbose=FALSE)
           {

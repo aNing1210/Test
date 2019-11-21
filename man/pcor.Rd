@@ -7,12 +7,14 @@
 pcor(x, method = c("pearson", "kendall", "spearman"))
 }
 \arguments{
-\item{x}{explanation of x}
+\item{x}{a matrix or data frame}
 
-\item{method}{explanation of method}
+\item{method}{a character string indicating which partial correlation coefficient is to be computed}
 }
 \value{
-The value returned by this function.
+a matrix of the partial correlation coefficient between two variables,
+a matrix of the p value of the test,a matrix of the value of the test statistic,
+the number of samples, the number of given variables, the correlation method used
 }
 \description{
 This is a brief description of pcor.
@@ -26,9 +28,6 @@ pcor(y.data)
 
 
 
-}
-\references{
-\url{https://github.com/yihui/rmini}
 }
 \author{
 Who are you?

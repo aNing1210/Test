@@ -1,11 +1,12 @@
 #' @description This is a brief description of pcor.
 #'
 #' @title This is a title of pcor
-#' @param x explanation of x
-#' @param method explanation of method
-#' @return The value returned by this function.
+#' @param x a matrix or data frame
+#' @param method a character string indicating which partial correlation coefficient is to be computed
+#' @return a matrix of the partial correlation coefficient between two variables,
+#' a matrix of the p value of the test,a matrix of the value of the test statistic,
+#' the number of samples, the number of given variables, the correlation method used
 #' @author Who are you?
-#' @references \url{https://github.com/yihui/rmini}
 #' @importFrom stats cov cov2cor pnorm pt
 #' @importFrom MASS ginv
 #' @export
@@ -81,7 +82,6 @@ pcor <- function(x, method = c("pearson", "kendall", "spearman"))
 #' @param method explanation of method
 #' @return The value returned by this function.
 #' @author Who are you?
-#' @references \url{https://github.com/yihui/rmini}
 #' @export
 #'
 #' @examples
